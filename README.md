@@ -11,4 +11,9 @@ OBJECTIVES:
 MAIN FEATURES:
   - Allows the users to submit multiple images, descriptions, and conditions.
   - uses an external API to identify item material categories.
-  -
+  - Provides a secure login system where registered users can access the Trash2Cash application using their email and password.
+  - Uses Image Recognition API to Identify uploaded waste images classify materials into categories suchas plastic, paper, glass, metal and other waste materials.
+  - Provides creative DIY recommendations and suggests useful or sellable products that can be made from identified waste materials.
+  - Help users estimate the market value pf recyclable materials based on their type, quantity, weight, and condition.
+  - Calculates production costs, suggest selling prices, and potential earnings from uncycled products.
+  - Recommends proper recycling methods and safe disposal practices for materials that cannot be reused or uncycled.
