@@ -17,3 +17,22 @@ MAIN FEATURES:
   - Help users estimate the market value pf recyclable materials based on their type, quantity, weight, and condition.
   - Calculates production costs, suggest selling prices, and potential earnings from uncycled products.
   - Recommends proper recycling methods and safe disposal practices for materials that cannot be reused or uncycled.
+
+TARGET BENEFICIARIES:
+
+Trash2Cash primarily targets households, students, individuals, small businesses, and waste collectors who want to manage unwanted materials more responsibly.
+
+The system aims to help users identify recyclable and reusable waste, discover opportunities to turn unwanted materials into useful products, estimate their potential market value, and learn proper recycling and disposal practices.
+
+Through this system, Trash2Cash aims to promote environmental awareness, reduce waste, and encourage a more sustainable and resourceful community.
+
+Primary Target Users:
+
+- Households and Individuals – People who want to identify recyclable materials and practice proper waste management.
+- Students – Learners who want to develop environmental awareness and responsible recycling habits.
+
+Secondary Target Users:
+
+- Small Businesses – Businesses that want to manage recyclable materials and explore additional income opportunities.
+- Waste Collectors – People who collect and sell recyclable materials.
+- Environmental Organizations – Groups that promote recycling and sustainable waste management.
