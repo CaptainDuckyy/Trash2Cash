@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trash2Cash - Add your items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- top bar -->
+  <nav class="topbar">
+    <a class="logo" href="upload.html">Trash<span class="two">2</span><span class="cash">Cash</span></a>
+    <div class="top-links">
+      <a class="button" href="landing.html">Sign out</a>
+    </div>
+  </nav>
+
+  <div class="upload-layout">
+
+    <!-- left side: what you can do + advice -->
+    <section class="dark-box">
+      <h2>What you can do with an item</h2>
+
+      <div class="tiles">
+        <div class="tile"><strong><i class="dot"></i>Recycle</strong><span>Steps for preparing and dropping off.</span></div>
+        <div class="tile"><strong><i class="dot green"></i>Reuse</strong><span>Keep using it as it is.</span></div>
+        <div class="tile"><strong><i class="dot pink"></i>Upcycle</strong><span>Creative ideas with photos.</span></div>
+        <div class="tile"><strong><i class="dot orange"></i>Sell</strong><span>A price range when it has value.</span></div>
+        <div class="tile"><strong><i class="dot"></i>Donate</strong><span>For items others can use.</span></div>
+        <div class="tile"><strong><i class="dot green"></i>Repair</strong><span>When a fix beats replacing.</span></div>
+        <div class="tile"><strong><i class="dot pink"></i>Dispose properly</strong><span>Safe disposal as a last step.</span></div>
+        <div class="tile"><strong><i class="dot orange"></i>Estimated value</strong><span>A range by material, weight and condition.</span></div>
+      </div>
+
+      <div class="advice">
+        <h3>Advice you can check</h3>
+        <p>The AI only identifies the material from your photo. Recycling and disposal guidance comes from our own data, and every result shows its source. Values are estimates only.</p>
+      </div>
+    </section>
+
+    <!-- right side: the form
+         For now: method="get" and action="results.html" so you can click through.
+         Later (Java): action="/analyze" method="post" enctype="multipart/form-data" -->
+    <form class="white-box" action="results.html" method="get">
+      <h2>Add your items</h2>
+      <p class="small-text">Fill in at least one row. Empty rows are skipped, and each item is checked on its own. Weight and quantity are optional.</p>
+
+      <!-- titles for the columns -->
+      <div class="item-row row-titles">
+        <span></span><span>Photo</span><span>Description</span><span>Condition</span><span>Recyclable?</span><span>Kg</span><span>Qty</span>
+      </div>
+
+      <div class="rows">
+
+        <!-- item 1 -->
+        <div class="item-row">
+          <span class="item-number">1</span>
+          <input type="file" name="photo1" accept="image/jpeg,image/png,image/webp" aria-label="Item 1 photo">
+          <input type="text" name="description1" maxlength="120" placeholder="What is it?" aria-label="Item 1 description">
+          <select name="condition1" aria-label="Item 1 condition">
+            <option value="GOOD">Good</option>
+            <option value="FAIR">Fair</option>
+            <option value="DAMAGED">Damaged</option>
+            <option value="BROKEN">Broken</option>
+          </select>
+          <div class="yes-no">
+            <label><input type="radio" name="recyclable1" value="yes" checked><span>Yes</span></label>
+            <label><input type="radio" name="recyclable1" value="no"><span>No</span></label>
+          </div>
+          <input type="number" name="weight1" min="0" step="0.1" placeholder="kg" aria-label="Item 1 weight in kg">
+          <input type="number" name="quantity1" min="1" step="1" value="1" aria-label="Item 1 quantity">
+        </div>
+
+        <!-- item 2 -->
+        <div class="item-row">
+          <span class="item-number">2</span>
+          <input type="file" name="photo2" accept="image/jpeg,image/png,image/webp" aria-label="Item 2 photo">
+          <input type="text" name="description2" maxlength="120" placeholder="What is it?" aria-label="Item 2 description">
+          <select name="condition2" aria-label="Item 2 condition">
+            <option value="GOOD">Good</option>
+            <option value="FAIR">Fair</option>
+            <option value="DAMAGED">Damaged</option>
+            <option value="BROKEN">Broken</option>
+          </select>
+          <div class="yes-no">
+            <label><input type="radio" name="recyclable2" value="yes" checked><span>Yes</span></label>
+            <label><input type="radio" name="recyclable2" value="no"><span>No</span></label>
+          </div>
+          <input type="number" name="weight2" min="0" step="0.1" placeholder="kg" aria-label="Item 2 weight in kg">
+          <input type="number" name="quantity2" min="1" step="1" value="1" aria-label="Item 2 quantity">
+        </div>
+
+        <!-- item 3 -->
+        <div class="item-row">
+          <span class="item-number">3</span>
+          <input type="file" name="photo3" accept="image/jpeg,image/png,image/webp" aria-label="Item 3 photo">
+          <input type="text" name="description3" maxlength="120" placeholder="What is it?" aria-label="Item 3 description">
+          <select name="condition3" aria-label="Item 3 condition">
+            <option value="GOOD">Good</option>
+            <option value="FAIR">Fair</option>
+            <option value="DAMAGED">Damaged</option>
+            <option value="BROKEN">Broken</option>
+          </select>
+          <div class="yes-no">
+            <label><input type="radio" name="recyclable3" value="yes" checked><span>Yes</span></label>
+            <label><input type="radio" name="recyclable3" value="no"><span>No</span></label>
+          </div>
+          <input type="number" name="weight3" min="0" step="0.1" placeholder="kg" aria-label="Item 3 weight in kg">
+          <input type="number" name="quantity3" min="1" step="1" value="1" aria-label="Item 3 quantity">
+        </div>
+
+        <!-- item 4 -->
+        <div class="item-row">
+          <span class="item-number">4</span>
+          <input type="file" name="photo4" accept="image/jpeg,image/png,image/webp" aria-label="Item 4 photo">
+          <input type="text" name="description4" maxlength="120" placeholder="What is it?" aria-label="Item 4 description">
+          <select name="condition4" aria-label="Item 4 condition">
+            <option value="GOOD">Good</option>
+            <option value="FAIR">Fair</option>
+            <option value="DAMAGED">Damaged</option>
+            <option value="BROKEN">Broken</option>
+          </select>
+          <div class="yes-no">
+            <label><input type="radio" name="recyclable4" value="yes" checked><span>Yes</span></label>
+            <label><input type="radio" name="recyclable4" value="no"><span>No</span></label>
+          </div>
+          <input type="number" name="weight4" min="0" step="0.1" placeholder="kg" aria-label="Item 4 weight in kg">
+          <input type="number" name="quantity4" min="1" step="1" value="1" aria-label="Item 4 quantity">
+        </div>
+
+        <!-- item 5 -->
+        <div class="item-row">
+          <span class="item-number">5</span>
+          <input type="file" name="photo5" accept="image/jpeg,image/png,image/webp" aria-label="Item 5 photo">
+          <input type="text" name="description5" maxlength="120" placeholder="What is it?" aria-label="Item 5 description">
+          <select name="condition5" aria-label="Item 5 condition">
+            <option value="GOOD">Good</option>
+            <option value="FAIR">Fair</option>
+            <option value="DAMAGED">Damaged</option>
+            <option value="BROKEN">Broken</option>
+          </select>
+          <div class="yes-no">
+            <label><input type="radio" name="recyclable5" value="yes" checked><span>Yes</span></label>
+            <label><input type="radio" name="recyclable5" value="no"><span>No</span></label>
+          </div>
+          <input type="number" name="weight5" min="0" step="0.1" placeholder="kg" aria-label="Item 5 weight in kg">
+          <input type="number" name="quantity5" min="1" step="1" value="1" aria-label="Item 5 quantity">
+        </div>
+      </div>
+
+      <div class="form-bottom">
+        <span class="small-text">JPEG, PNG or WebP, up to 4 MB each. Analysis can take a few seconds.</span>
+        <button type="submit" class="button">Analyze my items</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+</body>
+</html>
