@@ -3,32 +3,32 @@ package com.trash2cash.model;
 import java.util.List;
 
 public class AnalysisResult {
-    private int rowNumber;                  // 1 to 5 (maps to #choose1..#choose5)
-    private boolean analysisFailed;         // true if photo couldn't be identified
-    private String errorMessage;            // Shown when analysisFailed is true
+    private int rowNumber;                 
+    private boolean analysisFailed;         
+    private String errorMessage;            
 
     // Item & AI Detection Info
-    private String itemName;                // e.g., "Clear PET Plastic Bottle"
-    private String materialCategory;        // "PLASTIC", "PAPER", "GLASS", "METAL", or "OTHER"
-    private String condition;               // "GOOD", "FAIR", "DAMAGED", or "BROKEN"
-    private String photoDataUri;            // "data:image/jpeg;base64,..." for .photo-box img
+    private String itemName;               
+    private String materialCategory;      
+    private String condition;              
+    private String photoDataUri;            
 
     // Recyclability Mismatch Warning (triggers .warning box in style.css)
     private boolean showRecyclableWarning;
     private String warningMessage;
 
     // Guidance from WasteKnowledgeService
-    private String primaryAction;           // e.g., "Upcycle", "Recycle", "Sell", "Dispose properly"
-    private String recyclingSteps;          // Preparing and dropping off steps
-    private String diyUpcycleIdea;          // Creative DIY suggestion & sellable product idea
-    private String disposalGuidance;        // Safe disposal instructions as a last step
-    private String dataSourceNote;          // Source note ("Guidance from Trash2Cash data")
+    private String primaryAction;     
+    private String recyclingSteps;      
+    private String diyUpcycleIdea;          
+    private String disposalGuidance;       
+    private String dataSourceNote;         
 
     // Pricing & Profit Calculator Defaults
-    private double estimatedMinValue;       // Low end of estimated market value
-    private double estimatedMaxValue;       // High end of estimated market value
-    private double suggestedMaterialCost;   // Pre-fill for .calc profit calculator
-    private double suggestedSellingPrice;   // Suggested selling price for upcycled product
+    private double estimatedMinValue;     
+    private double estimatedMaxValue;      
+    private double suggestedMaterialCost;  
+    private double suggestedSellingPrice;  
 
     // Upcycling Gallery Images (3 slots for .gallery in results.html)
     private List<String> upcycleGalleryUrls;
@@ -36,7 +36,7 @@ public class AnalysisResult {
     public AnalysisResult() {}
 
     /**
-     * Formats the estimated value range for the .value display (e.g., "₱15 – ₱25" or "$1.50 – $3.00").
+     * Formats the estimated value range for the .value display 
      */
     public String getFormattedValueRange(String currencySymbol) {
         if (estimatedMaxValue <= 0) {
