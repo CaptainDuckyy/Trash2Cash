@@ -3,14 +3,14 @@ package com.trash2cash.model;
 import java.util.Base64;
 
 public class WasteItemInput {
-    private int rowNumber;                  // 1 to 5
-    private byte[] photoBytes;              // Uploaded JPEG, PNG, or WebP bytes
-    private String mimeType;                // "image/jpeg", "image/png", or "image/webp"
-    private String description;             // Optional user hint (max 120 chars)
-    private String condition;               // "GOOD", "FAIR", "DAMAGED", or "BROKEN"
-    private boolean userMarkedRecyclable;   // true if radio = "yes", false if "no"
-    private double weightKg;                // Optional weight in kg (0.0 if left blank)
-    private int quantity;                   // Quantity (defaults to 1)
+    private int rowNumber;                 
+    private byte[] photoBytes;           
+    private String mimeType;             
+    private String description;           
+    private String condition;             
+    private boolean userMarkedRecyclable; 
+    private double weightKg;               
+    private int quantity;                  
 
     public WasteItemInput() {
         this.quantity = 1;
@@ -37,10 +37,7 @@ public class WasteItemInput {
         return !hasPhoto && !hasDescription;
     }
 
-    /**
-     * Helper to convert uploaded image bytes to Base64 for the Gemini API
-     * or for displaying the photo preview on results.html.
-     */
+
     public String getPhotoBase64() {
         if (photoBytes == null || photoBytes.length == 0) {
             return "";
