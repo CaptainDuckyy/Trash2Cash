@@ -40,10 +40,8 @@
       </div>
     </section>
 
-    <!-- right side: the form
-         For now: method="get" and action="results.html" so you can click through.
-         Later (Java): action="/analyze" method="post" enctype="multipart/form-data" -->
-    <form class="white-box" action="results.html" method="get">
+    <!-- Java can later receive this multipart POST at /analyze. -->
+    <form class="white-box" id="waste-form" action="/analyze" method="post" enctype="multipart/form-data">
       <h2>Add your items</h2>
       <p class="small-text">Fill in at least one row. Empty rows are skipped, and each item is checked on its own. Weight and quantity are optional.</p>
 
@@ -158,5 +156,6 @@
 
   </div>
 </div>
+<script src="app.js"></script>
 </body>
 </html>
