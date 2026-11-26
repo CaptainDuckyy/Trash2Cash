@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trash2Cash - Add your items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wave"></div>
+<div class="page scroll">
+
+  <!-- top bar -->
+  <nav class="topbar" id="top">
+    <a class="logo" href="upload.html">Trash<span class="two">2</span><span class="cash">Cash</span></a>
+    <div class="top-links">
+      <a class="button" href="landing.html">Sign out</a>
+    </div>
+  </nav>
+
+  <!-- UPLOAD  -->
+  <div class="upload-layout">
+
+    <!-- left side: what you can do + advice -->
+    <section class="dark-box">
+      <h2>What you can do with an item</h2>
+
+      <div class="tiles">
+        <div class="tile"><strong><i class="dot"></i>Recycle</strong><span>Steps for preparing and dropping off.</span></div>
+        <div class="tile"><strong><i class="dot green"></i>Reuse</strong><span>Keep using it as it is.</span></div>
+        <div class="tile"><strong><i class="dot pink"></i>Upcycle</strong><span>Creative ideas with photos.</span></div>
+        <div class="tile"><strong><i class="dot orange"></i>Sell</strong><span>A price range when it has value.</span></div>
+        <div class="tile"><strong><i class="dot"></i>Donate</strong><span>For items others can use.</span></div>
+        <div class="tile"><strong><i class="dot green"></i>Repair</strong><span>When a fix beats replacing.</span></div>
+        <div class="tile"><strong><i class="dot pink"></i>Dispose properly</strong><span>Safe disposal as a last step.</span></div>
+        <div class="tile"><strong><i class="dot orange"></i>Estimated value</strong><span>A range by material, weight and condition.</span></div>
+      </div>
+
+      <div class="advice">
+        <h3>Advice you can check</h3>
+        <p>The AI only identifies the material from your photo. Recycling and disposal guidance comes from our own data, and every result shows its source. Values are estimates only.</p>
+      </div>
+    </section>
+
+    <!-- right side: the form (3 items, one column each)
+        Later (Java): action="/analyze" method="post" enctype="multipart/form-data" -->
+    <form class="white-box" id="waste-form" action="#results" method="post" enctype="multipart/form-data">
+      <h2>Add your items</h2>
+      <p class="small-text">Fill in at least one item. Empty items are skipped, and each item is checked on its own. Weight and quantity are optional.</p>
+
+      <div class="item-cards">
+
+        <!-- item 1 -->
+        <div class="item-card">
+          <h3>Item 1</h3>
+          <div>
+            <label for="photo1">Photo</label>
+            <input type="file" id="photo1" name="photo1" accept="image/jpeg,image/png,image/webp">
+          </div>
+          <div>
+            <label for="description1">Description</label>
+            <input type="text" id="description1" name="description1" maxlength="120" placeholder="What is it?">
+          </div>
+          <div>
+            <label for="condition1">Condition</label>
+            <select id="condition1" name="condition1">
+              <option value="GOOD">Good</option>
+              <option value="FAIR">Fair</option>
+              <option value="DAMAGED">Damaged</option>
+              <option value="BROKEN">Broken</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend>Recyclable?</legend>
+            <div class="yes-no">
+              <label><input type="radio" name="recyclable1" value="yes" checked><span>Yes</span></label>
+              <label><input type="radio" name="recyclable1" value="no"><span>No</span></label>
+            </div>
+          </fieldset>
+          <div class="small-fields">
+            <div>
+              <label for="weight1">Kg</label>
+              <input type="number" id="weight1" name="weight1" min="0" step="0.1" placeholder="kg">
+            </div>
+            <div>
+              <label for="quantity1">Qty</label>
+              <input type="number" id="quantity1" name="quantity1" min="1" step="1" value="1">
+            </div>
+          </div>
+        </div>
+
+        <!-- item 2 -->
+        <div class="item-card">
+          <h3>Item 2</h3>
+          <div>
+            <label for="photo2">Photo</label>
+            <input type="file" id="photo2" name="photo2" accept="image/jpeg,image/png,image/webp">
+          </div>
+          <div>
+            <label for="description2">Description</label>
+            <input type="text" id="description2" name="description2" maxlength="120" placeholder="What is it?">
+          </div>
+          <div>
+            <label for="condition2">Condition</label>
+            <select id="condition2" name="condition2">
+              <option value="GOOD">Good</option>
+              <option value="FAIR">Fair</option>
+              <option value="DAMAGED">Damaged</option>
+              <option value="BROKEN">Broken</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend>Recyclable?</legend>
+            <div class="yes-no">
+              <label><input type="radio" name="recyclable2" value="yes" checked><span>Yes</span></label>
+              <label><input type="radio" name="recyclable2" value="no"><span>No</span></label>
+            </div>
+          </fieldset>
+          <div class="small-fields">
+            <div>
+              <label for="weight2">Kg</label>
+              <input type="number" id="weight2" name="weight2" min="0" step="0.1" placeholder="kg">
+            </div>
+            <div>
+              <label for="quantity2">Qty</label>
+              <input type="number" id="quantity2" name="quantity2" min="1" step="1" value="1">
+            </div>
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div class="item-card">
+          <h3>Item 3</h3>
+          <div>
+            <label for="photo3">Photo</label>
+            <input type="file" id="photo3" name="photo3" accept="image/jpeg,image/png,image/webp">
+          </div>
+          <div>
+            <label for="description3">Description</label>
+            <input type="text" id="description3" name="description3" maxlength="120" placeholder="What is it?">
+          </div>
+          <div>
+            <label for="condition3">Condition</label>
+            <select id="condition3" name="condition3">
+              <option value="GOOD">Good</option>
+              <option value="FAIR">Fair</option>
+              <option value="DAMAGED">Damaged</option>
+              <option value="BROKEN">Broken</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend>Recyclable?</legend>
+            <div class="yes-no">
+              <label><input type="radio" name="recyclable3" value="yes" checked><span>Yes</span></label>
+              <label><input type="radio" name="recyclable3" value="no"><span>No</span></label>
+            </div>
+          </fieldset>
+          <div class="small-fields">
+            <div>
+              <label for="weight3">Kg</label>
+              <input type="number" id="weight3" name="weight3" min="0" step="0.1" placeholder="kg">
+            </div>
+            <div>
+              <label for="quantity3">Qty</label>
+              <input type="number" id="quantity3" name="quantity3" min="1" step="1" value="1">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-bottom">
+        <span class="small-text">JPEG, PNG or WebP, up to 4 MB each. Analysis can take a few seconds.</span>
+        <button type="submit" class="button">Analyze my items</button>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- RESULTS (scroll down to see it) -->
+  <div class="section-bar" id="results">
+    <h2>Your results</h2>
+    <a class="top-link" href="#top">Back to top</a>
+  </div>
+
+  <!-- no results yet  -->
+  <section class="white-box empty-box" id="empty-results">
+    <h2>No results yet</h2>
+    <p>Add your items above and select <strong>Analyze my items</strong> to view recommendations and calculate potential profit.</p>
+  </section>
+
+  <div class="results-layout hide" id="results-layout"></div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
