@@ -62,11 +62,11 @@ a:focus, button:focus, input:focus, select:focus, label:focus-within {
   z-index: -1;
   background-repeat: no-repeat;
   background-position: center, center, bottom center;
-  background-size: 100% 100%, 100% 100%, 100% 210px;
+  background-size: 100% 100%, 100% 100%, 100% 220px;
   background-image:
     radial-gradient(circle at 12% 18%, rgba(181, 196, 122, 0.35), transparent 42%),
     radial-gradient(circle at 88% 82%, rgba(181, 96, 63, 0.22), transparent 45%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 260' preserveAspectRatio='none'%3E%3Cpath fill='%23B5C47A' d='M0,96 C320,165 560,25 920,85 C1150,123 1310,70 1440,45 L1440,260 L0,260 Z'/%3E%3Cpath fill='%235A6332' d='M0,145 C280,85 580,210 940,145 C1180,102 1330,135 1440,120 L1440,260 L0,260 Z'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 260' preserveAspectRatio='none'%3E%3Cpath fill='%23B5C47A' d='M0,70 C240,45 420,85 640,150 C860,215 1140,185 1440,70 L1440,260 L0,260 Z'/%3E%3Cpath fill='%235A6332' d='M0,96 C240,71 420,111 640,176 C860,241 1140,211 1440,96 L1440,260 L0,260 Z'/%3E%3C/svg%3E");
 }
 
 /* page frame */
